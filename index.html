@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aucoutix | Parlantes, Audífonos y Audio de Alta Gama en Perú</title>
+    <meta name="description" content="Catálogo exclusivo de audio portátiles y para el hogar: JBL, Harman Kardon, Bose, Sony, Apple, Devialet y Huawei. Garantía oficial y envíos en Perú.">
+    <link rel="canonical" href="https://www.aucoutix.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aucoutix | Equipos de Audio de Alta Gama">
+    <meta property="og:description" content="Encuentra los mejores parlantes, audífonos y accesorios de audio con entrega garantizada.">
+    <meta property="og:url" content="https://www.aucoutix.com/">
+    <meta property="og:image" content="img/logo.aucoutixfinal.jpg">
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap">
+    
+    <!-- Estilos Propios -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/LOGO,AUCOU.JPG" alt="Aucoutix - Volver al inicio" width="150" height="60">
+        </a>
+    </div>
+
+    <nav id="menu-principal" class="nav-colapsable" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="contacto2.html">Contacto</a>
+    </nav>
+
+    <div class="acciones">
+        <button id="btn-carrito" class="boton-carrito" aria-label="Abrir carrito de compras" aria-controls="carrito">
+            <span id="contador-carrito">0</span>
+        </button>
+        <button id="btn-menu" class="btn-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">☰</button>
+    </div>
+</header>
+
+<main id="contenido">
+
+    <!-- Panel Desplegable del Carrito -->
+    <aside id="carrito" class="carrito" aria-label="Carrito de compras" aria-hidden="true">
+        <div class="carrito-contenido">
+            <button id="cerrar-carrito" class="cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+            <h2>Mi Carrito de Compras</h2>
+            <div id="lista-carrito"></div>
+            <div class="total-carrito">
+                <strong>Total estimado:</strong> 
+                <span>S/ <span id="total-carrito">0.00</span></span>
+            </div>
+            <button id="btn-finalizar" class="finalizar">Finalizar compra</button>
+            <p id="mensaje-compra" role="status"></p>
+        </div>
+    </aside>
+
+    <!-- Carrusel Visual -->
+    <section class="carrusel" aria-label="Productos destacados de la temporada">
+        <div class="contenedor-slide">
+            <div class="slide"><img src="img/harman go play3.jpg" alt="Parlante Harman Kardon Go + Play 3" width="900" height="280"></div>
+            <div class="slide"><img src="img/Devialet phantom.jpg" alt="Parlante de alta fidelidad Devialet Phantom" width="900" height="280" loading="lazy"></div>
+            <div class="slide"><img src="img/JBL bombox.jpg" alt="Parlante portátil JBL Boombox 4" width="900" height="280" loading="lazy"></div>
+            <div class="slide"><img src="img/Audifonos_Inalambricos_Huawei_Freebuds_Pro5.png" alt="Audífonos Hi-Fi Huawei FreeBuds Pro 3" width="900" height="280" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- Hero / Presentación -->
+    <section class="inicio">
+        <h1>Lo mejor en sonido e innovación acústica</h1>
+        <p>Parlantes portátiles, sistemas para el hogar, audífonos Over-Ear, earbuds y accesorios de las marcas líderes mundialmente reconocidas.</p>
+        <a href="#productos" class="btn-productos">Explorar catálogo</a>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="beneficios" aria-labelledby="titulo-beneficios">
+        <h2 id="titulo-beneficios">Por qué elegir Aucoutix</h2>
+        <div class="grilla-beneficios">
+            <article>
+                <h3>Marcas Oficiales</h3>
+                <p>Distribución de JBL, Bose, Sony, Harman Kardon, Devialet, Apple y Huawei.</p>
+            </article>
+            <article>
+                <h3>Garantía Asegurada</h3>
+                <p>Todos nuestros equipos cuentan con garantía directa de fábrica y soporte local.</p>
+            </article>
+            <article>
+                <h3>Asesoría Especializada</h3>
+                <p>Te guiamos en la elección del equipo según tus necesidades de ecualización y espacio.</p>
+            </article>
+            <article>
+                <h3>Envíos a Todo el Perú</h3>
+                <p>Despacho rápido y seguro a Lima Metropolitana y provincias.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="productos" aria-labelledby="titulo-productos">
+        <h2 id="titulo-productos">Catálogo de Productos</h2>
+
+        <!-- Herramientas de Filtrado y Búsqueda -->
+        <div class="herramientas">
+            <div class="filtros" role="group" aria-label="Filtrar por categoría">
+                <button class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro" data-filtro="portatil" aria-pressed="false">Portátiles</button>
+                <button class="filtro" data-filtro="hogar" aria-pressed="false">Para el Hogar</button>
+                <button class="filtro" data-filtro="audifonos" aria-pressed="false">Audífonos</button>
+                <button class="filtro" data-filtro="earbuds" aria-pressed="false">Earbuds</button>
+                <button class="filtro" data-filtro="accesorios" aria-pressed="false">Accesorios</button>
+            </div>
+            <label class="buscador">
+                <span class="solo-lectores">Buscar producto o marca</span>
+                <input type="search" id="buscador" placeholder="Buscar por marca o modelo...">
+            </label>
+        </div>
+
+        <!-- Grilla Contenedora de Productos -->
+        <div class="contenedor-productos">
+
+            <!-- Producto 1: JBL Boombox 4 -->
+            <article class="card" data-id="jbl-boombox-4" data-nombre="JBL Boombox 4" data-precio="1500" data-categoria="portatil">
+                <span class="badge-categoria">Portátil</span>
+                <img src="img/JBL bombox.jpg" alt="Parlante JBL Boombox 4" width="220" height="130" loading="lazy">
+                <h3>JBL Boombox 4</h3>
+                <p class="descripcion">Graves explosivos y sonido masivo JBL Original Pro.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 24 horas</li>
+                    <li><strong>Protección:</strong> IP67 (Agua y Polvo)</li>
+                    <li><strong>Conexión:</strong> Bluetooth 5.3</li>
+                </ul>
+                <p class="precio">S/ 1,500.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 2: Harman Kardon Go + Play 3 -->
+            <article class="card" data-id="harman-go-play-3" data-nombre="Harman Kardon Go + Play 3" data-precio="1700" data-categoria="portatil">
+                <span class="badge-categoria">Portátil</span>
+                <img src="img/harman go play3.jpg" alt="Parlante Harman Kardon Go + Play 3" width="220" height="130" loading="lazy">
+                <h3>Harman Kardon Go + Play 3</h3>
+                <p class="descripcion">Diseño atemporal con sonido estéreo de 3 vías de alta fidelidad.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 8 horas</li>
+                    <li><strong>Material:</strong> Aluminio y tela reciclada</li>
+                    <li><strong>Calibración:</strong> Automática según entorno</li>
+                </ul>
+                <p class="precio">S/ 1,700.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 3: Devialet Phantom -->
+            <article class="card" data-id="devialet-phantom" data-nombre="Devialet Phantom I" data-precio="19800" data-categoria="hogar">
+                <span class="badge-categoria">Hogar</span>
+                <img src="img/Devialet phantom.jpg" alt="Parlante de alta gama Devialet Phantom" width="220" height="130" loading="lazy">
+                <h3>Devialet Phantom I</h3>
+                <p class="descripcion">Ingeniería acústica ultra-premium con graves sub-sónicos sin distorsión.</p>
+                <ul class="especificaciones">
+                    <li><strong>Potencia:</strong> 1100W RMS (108 dB)</li>
+                    <li><strong>Frecuencia:</strong> 14Hz – 27kHz</li>
+                    <li><strong>Conectividad:</strong> Wi-Fi, AirPlay 2, Óptico</li>
+                </ul>
+                <p class="precio">S/ 19,800.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 4: Apple HomePod 2.ª gen -->
+            <article class="card" data-id="apple-homepod-2" data-nombre="Apple HomePod 2.ª gen" data-precio="1880" data-categoria="hogar">
+                <span class="badge-categoria">Hogar</span>
+                <img src="img/Bocina Apple HomePod 2da Generacion.jpg" alt="Bocina inteligente Apple HomePod 2.ª generación" width="220" height="130" loading="lazy">
+                <h3>Apple HomePod 2.ª gen</h3>
+                <p class="descripcion">Audio espacial computacional con integración total al ecosistema Apple.</p>
+                <ul class="especificaciones">
+                    <li><strong>Procesador:</strong> Chip S7</li>
+                    <li><strong>Asistente:</strong> Siri integrado</li>
+                    <li><strong>Sensores:</strong> Temperatura y Humedad</li>
+                </ul>
+                <p class="precio">S/ 1,880.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 5: Bose SoundLink Max -->
+            <article class="card" data-id="bose-soundlink-max" data-nombre="Bose SoundLink Max" data-precio="1849" data-categoria="portatil">
+                <span class="badge-categoria">Portátil</span>
+                <img src="img/bose_soundlink1.jpg" alt="Parlante portátil Bose SoundLink Max" width="220" height="130" loading="lazy">
+                <h3>Bose SoundLink Max</h3>
+                <p class="descripcion">Sonido envolvente e intenso en un cuerpo resistente con asa de transporte.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 20 horas</li>
+                    <li><strong>Protección:</strong> IP67</li>
+                    <li><strong>Entrada:</strong> AUX 3.5mm y USB-C</li>
+                </ul>
+                <p class="precio">S/ 1,849.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 6: Sony ULT FIELD 5 -->
+            <article class="card" data-id="sony-ult-field-5" data-nombre="Sony ULT FIELD 5 (SRS-ULT50)" data-precio="999" data-categoria="portatil">
+                <span class="badge-categoria">Portátil</span>
+                <img src="img/ULT FIELD 5SRS-ULT50.jpg" alt="Parlante inalámbrico Sony ULT FIELD 5 SRS-ULT50" width="220" height="130" loading="lazy">
+                <h3>Sony ULT FIELD 5</h3>
+                <p class="descripcion">Presiona el botón ULT para potenciar tus graves con iluminación RGB.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 25 horas</li>
+                    <li><strong>Carga rápida:</strong> 10 min = 2 horas</li>
+                    <li><strong>Protección:</strong> IP67 (Resistente al agua salada)</li>
+                </ul>
+                <p class="precio">S/ 999.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 7: Sony ULT FIELD 3 -->
+            <article class="card" data-id="sony-ult-field-3" data-nombre="Sony ULT FIELD 3 (SRS-ULT30)" data-precio="880" data-categoria="portatil">
+                <span class="badge-categoria">Portátil</span>
+                <img src="img/Sony Parlante Bluetooth Srs-ult30 Portátil Ult Field 3 Negro.jpg" alt="Parlante Sony SRS-ULT30 ULT FIELD 3" width="220" height="130" loading="lazy">
+                <h3>Sony ULT FIELD 3</h3>
+                <p class="descripcion">Diseño ultra compacto de alta presión acústica para acompañarte siempre.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 12 horas</li>
+                    <li><strong>Correa:</strong> Multiposición incluida</li>
+                    <li><strong>Función:</strong> Manos libres con micrófono</li>
+                </ul>
+                <p class="precio">S/ 880.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 8: Sony WH-1000XM5 -->
+            <article class="card" data-id="sony-wh1000xm5" data-nombre="Sony WH-1000XM5" data-precio="1499" data-categoria="audifonos">
+                <span class="badge-categoria">Audífonos</span>
+                <img src="img/Sony WH-1000XM5.jpg" alt="Audífonos Noise Cancelling Sony WH-1000XM5" width="220" height="130" loading="lazy">
+                <h3>Sony WH-1000XM5</h3>
+                <p class="descripcion">Cancelación de ruido líder en la industria con procesador HD QN1.</p>
+                <ul class="especificaciones">
+                    <li><strong>Batería:</strong> Hasta 30 horas</li>
+                    <li><strong>Códec:</strong> LDAC Hi-Res Audio</li>
+                    <li><strong>Micrófonos:</strong> 8 con IA para llamadas</li>
+                </ul>
+                <p class="precio">S/ 1,499.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 9: Apple AirPods Pro 2 -->
+            <article class="card" data-id="apple-airpods-pro-2" data-nombre="Apple AirPods Pro (2.ª gen)" data-precio="1099" data-categoria="earbuds">
+                <span class="badge-categoria">Earbuds</span>
+                <img src="img/Air pods pro2.jpg" alt="Earbuds Apple AirPods Pro 2da Generacion" width="220" height="130" loading="lazy">
+                <h3>Apple AirPods Pro 2</h3>
+                <p class="descripcion">Cancelación activa de ruido hasta 2x superior con Audio Adaptativo.</p>
+                <ul class="especificaciones">
+                    <li><strong>Procesador:</strong> Chip H2</li>
+                    <li><strong>Batería total:</strong> Hasta 30 horas con estuche</li>
+                    <li><strong>Estuche:</strong> MagSafe USB-C con altavoz</li>
+                </ul>
+                <p class="precio">S/ 1,099.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 10: Huawei FreeBuds Pro 3 -->
+            <article class="card" data-id="huawei-freebuds-pro-3" data-nombre="Huawei FreeBuds Pro 3" data-precio="799" data-categoria="earbuds">
+                <span class="badge-categoria">Earbuds</span>
+                <img src="img/Audifonos_Inalambricos_Huawei_Freebuds_Pro5.png" alt="Earbuds Huawei FreeBuds Pro 3" width="220" height="130" loading="lazy">
+                <h3>Huawei FreeBuds Pro 3</h3>
+                <p class="descripcion">Sistema de doble driver Ultra-Hearing con ecualización triple en tiempo real.</p>
+                <ul class="especificaciones">
+                    <li><strong>Códec:</strong> L2HC 2.0 y LDAC</li>
+                    <li><strong>Cancelación:</strong> ANC 3.0 inteligente</li>
+                    <li><strong>Conexión:</strong> Dual Device Seamless Switch</li>
+                </ul>
+                <p class="precio">S/ 799.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 11: Estuche Rígido Aucoutix -->
+            <article class="card" data-id="estuche-aucoutix" data-nombre="Estuche Rígido Aucoutix Pro" data-precio="89" data-categoria="accesorios">
+                <span class="badge-categoria">Accesorios</span>
+                <img src="img/Gemini_Generated_Image_gyam9rgyam9rgyam.jpg" alt="Estuche de protección dura para parlantes y audífonos" width="220" height="130" loading="lazy">
+                <h3>Estuche Rígido Aucoutix Pro</h3>
+                <p class="descripcion">Funda reforzada anti-impactos para resguardar tus parlantes y audífonos.</p>
+                <ul class="especificaciones">
+                    <li><strong>Material:</strong> EVA de alta densidad</li>
+                    <li><strong>Interior:</strong> Terciopelo antirrayaduras</li>
+                    <li><strong>Extras:</strong> Malla para cables</li>
+                </ul>
+                <p class="precio">S/ 89.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+            <!-- Producto 12: Cable AUX Premium Gold 3.5mm -->
+            <article class="card" data-id="cable-aux-gold" data-nombre="Cable Audio AUX Gold 3.5mm" data-precio="45" data-categoria="accesorios">
+                <span class="badge-categoria">Accesorios</span>
+                <img src="img/Cable Audio AUX Gold 3.5mm.jpg" alt="Cable Auxiliar de Audio Chapado en Oro" width="220" height="130" loading="lazy">
+                <h3>Cable Audio AUX Gold 3.5mm</h3>
+                <p class="descripcion">Transmisión de señal analógica pura sin interferencias ni pérdida de señal.</p>
+                <ul class="especificaciones">
+                    <li><strong>Conectores:</strong> Chapados en Oro de 24K</li>
+                    <li><strong>Longitud:</strong> 1.2 Metros</li>
+                    <li><strong>Recubrimiento:</strong> Nylon trenzado militar</li>
+                </ul>
+                <p class="precio">S/ 45.00</p>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </article>
+
+        </div>
+        <p id="sin-resultados" hidden>No encontramos ningún producto que coincida con tu búsqueda. Intenta con otra palabra o categoría.</p>
+    </section>
+
+    <!-- Sección de Video Informativo -->
+    <section class="seccion-video" aria-labelledby="titulo-video">
+        <h2 id="titulo-video">Experiencia Acústica en Detalle</h2>
+        <p>Conoce de cerca la calidad de construcción y potencia de nuestros modelos insignia.</p>
+        <div class="contenedor-video">
+            <video controls preload="none" playsinline poster="img/harman go play3.jpg">
+                <source src="videos 2.0/VIDEOharmam kardononix.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de videos HTML5.
+            </video>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section id="preguntas" class="faq" aria-labelledby="titulo-faq">
+        <h2 id="titulo-faq">Preguntas Frecuentes</h2>
+        <details>
+            <summary>¿Los productos cuentan con garantía oficial?</summary>
+            <p>Sí, todos los productos comercializados por Aucoutix cuentan con garantía oficial directa por fallas de fábrica por un periodo de 12 meses.</p>
+        </details>
+        <details>
+            <summary>¿Cuáles son las opciones de pago y formas de entrega?</summary>
+            <p>Aceptamos tarjetas de crédito, débito, transferencia bancaria y Yape/Plin. Ofrecemos envíos a domicilio en Lima y despachos a provincias mediante agencia certificada.</p>
+        </details>
+        <details>
+            <summary>¿Puedo realizar cambios o devoluciones?</summary>
+            <p>Aceptamos cambios dentro de los primeros 7 días posteriores a la compra, siempre que el equipo no presente uso y se conserve en empaque sellado original.</p>
+        </details>
+        <details>
+            <summary>¿Cómo solicito asesoría para elegir el equipo correcto?</summary>
+            <p>Puedes escribirnos mediante la sección de Contacto o enviarnos un correo a ventas@aucoutix.com para recibir recomendación personalizada de un especialista.</p>
+        </details>
+    </section>
+
+</main>
+
+<footer id="contacto">
+    <p>Aucoutix - Yormin &copy; 2026. Todos los derechos reservados.</p>
+    <p>Contacto oficial: <a href="mailto:ventas@aucoutix.com">ventas@aucoutix.com</a> | Lima, Perú</p>
+</footer>
+<!-- En index.html dentro de <head> -->
+<script src="carrito.js" defer></script>
+
+</body>
+</html>

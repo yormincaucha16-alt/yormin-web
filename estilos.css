@@ -1,0 +1,492 @@
+/* =========================================
+   AUCOUTIX - HOJA DE ESTILOS
+   Paleta: tinta azul noche, papel frío, latón
+   Tipografía: Merriweather (títulos) + Montserrat (interfaz)
+   ========================================= */
+
+:root {
+    --tinta: #14202b;
+    --tinta-suave: #2b3a47;
+    --papel: #f1f4f6;
+    --blanco: #ffffff;
+    --laton: #a87a1f;
+    --laton-claro: #f3e6c4;
+    --linea: #d5dde3;
+    --error: #b3261e;
+    --exito: #1f6b4a;
+    --radio: 6px;
+    --sombra: 0 6px 20px rgba(20, 32, 43, 0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--tinta);
+    background: var(--papel);
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+    font-family: "Merriweather", Georgia, serif;
+    line-height: 1.25;
+    margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 2rem); text-align: center; }
+h3 { font-size: 1.05rem; }
+
+a { color: var(--tinta); }
+
+:focus-visible {
+    outline: 3px solid var(--laton);
+    outline-offset: 2px;
+}
+
+.saltar {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--blanco);
+    padding: 10px 16px;
+    z-index: 200;
+}
+.saltar:focus { left: 8px; top: 8px; }
+
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 5%;
+    background: var(--tinta);
+}
+
+.logo img { width: 150px; height: 60px; object-fit: contain; background: var(--blanco); border-radius: 4px; }
+
+header nav { display: flex; gap: 24px; margin-left: auto; }
+
+header nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+}
+header nav a:hover { border-color: var(--laton); }
+
+.acciones { display: flex; align-items: center; gap: 10px; }
+
+.boton-carrito, .btn-menu {
+    position: relative;
+    background: transparent;
+    color: var(--blanco);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radio);
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.boton-carrito::before { content: "🛒"; }
+.btn-menu { display: none; }
+
+#contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-radius: 11px;
+    background: var(--laton);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+}
+#contador-carrito.pop { animation: pop 0.3s ease; }
+@keyframes pop { 50% { transform: scale(1.4); } }
+
+/* ---------- Carrito lateral ---------- */
+.carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(400px, 100%);
+    height: 100%;
+    background: var(--blanco);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.25);
+    transform: translateX(105%);
+    transition: transform 0.3s ease;
+    z-index: 300;
+    overflow-y: auto;
+}
+.carrito.mostrar { transform: translateX(0); }
+
+.carrito-contenido { padding: 24px 20px; }
+.carrito h2 { text-align: left; padding-right: 40px; }
+
+.cerrar-carrito {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--papel);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--linea);
+}
+.producto-carrito h3 { font-size: 0.95rem; margin-bottom: 2px; }
+.producto-carrito p { margin: 0; font-size: 0.85rem; color: var(--tinta-suave); }
+
+.controles { display: flex; align-items: center; gap: 6px; }
+.controles button {
+    min-width: 34px;
+    height: 34px;
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+    background: var(--blanco);
+    cursor: pointer;
+}
+.controles button:hover { background: var(--papel); }
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    font-size: 1.1rem;
+}
+
+.finalizar {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: var(--radio);
+    background: var(--tinta);
+    color: var(--blanco);
+    font: 700 1rem "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.finalizar:hover { background: var(--tinta-suave); }
+
+#mensaje-compra { margin: 12px 0 0; font-size: 0.9rem; color: var(--exito); }
+
+/* ---------- Carrusel ---------- */
+.carrusel { background: var(--tinta); }
+
+.contenedor-slide {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+.slide { flex: 0 0 100%; scroll-snap-align: center; }
+.slide img {
+    width: 100%;
+    height: clamp(180px, 30vw, 320px);
+    object-fit: cover;
+}
+
+/* ---------- Presentación ---------- */
+.inicio {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 5%;
+    text-align: center;
+}
+.inicio p { color: var(--tinta-suave); }
+
+.btn-productos {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 28px;
+    border-radius: var(--radio);
+    background: var(--laton);
+    color: var(--blanco);
+    font-weight: 700;
+    text-decoration: none;
+}
+.btn-productos:hover { background: #8d6618; }
+
+/* ---------- Secciones ---------- */
+main > section { padding: 48px 5%; }
+
+.beneficios { background: var(--blanco); }
+
+.grilla-beneficios {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.grilla-beneficios article {
+    padding: 20px;
+    border-left: 4px solid var(--laton);
+    background: var(--papel);
+}
+.grilla-beneficios p { margin: 0; font-size: 0.92rem; }
+
+/* ---------- Catálogo ---------- */
+#productos { max-width: 1250px; margin: 0 auto; }
+
+.herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.filtro {
+    padding: 9px 16px;
+    border: 1px solid var(--tinta);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--tinta);
+    font: 600 0.88rem "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.filtro:hover { background: var(--laton-claro); }
+.filtro.activo { background: var(--tinta); color: var(--blanco); }
+
+.buscador input {
+    width: min(320px, 100%);
+    padding: 10px 14px;
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+    font: inherit;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+}
+.card:hover { box-shadow: var(--sombra); }
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+
+.badge-categoria {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--laton-claro);
+    color: #6b4c0e;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.descripcion { margin: 0 0 10px; font-size: 0.92rem; color: var(--tinta-suave); }
+
+.especificaciones {
+    margin: 0 0 14px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+}
+.especificaciones li { padding: 4px 0; border-bottom: 1px dashed var(--linea); }
+
+.precio {
+    margin: auto 0 12px;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.btn-comprar {
+    padding: 12px;
+    border: 0;
+    border-radius: var(--radio);
+    background: var(--tinta);
+    color: var(--blanco);
+    font: 700 0.92rem "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.btn-comprar:hover { background: var(--laton); }
+
+#sin-resultados { text-align: center; padding: 30px 0; color: var(--tinta-suave); }
+
+/* ---------- Video ---------- */
+.seccion-video { text-align: center; background: var(--blanco); }
+.seccion-video p { max-width: 560px; margin: 0 auto 20px; }
+
+.contenedor-video { max-width: 860px; margin: 0 auto; }
+.contenedor-video video { width: 100%; border-radius: var(--radio); background: #000; }
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq { max-width: 800px; margin: 0 auto; }
+
+.faq details {
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+    margin-bottom: 10px;
+}
+.faq summary {
+    padding: 16px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.faq details[open] summary { border-bottom: 1px solid var(--linea); }
+.faq details p { margin: 0; padding: 14px 18px 18px; }
+
+/* ---------- Contacto ---------- */
+.contacto { max-width: 1050px; margin: 0 auto; }
+.contacto h1, .contacto-intro { text-align: center; }
+.contacto-intro { max-width: 620px; margin: 0 auto 30px; color: var(--tinta-suave); }
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.form-contacto, .contacto-info {
+    padding: 26px;
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+}
+
+.campo { display: flex; flex-direction: column; margin-bottom: 18px; }
+.campo label { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    padding: 11px 12px;
+    border: 1px solid #aab6bf;
+    border-radius: var(--radio);
+    font: inherit;
+    background: var(--blanco);
+}
+.campo textarea { resize: vertical; }
+
+.campo.invalido input,
+.campo.invalido select,
+.campo.invalido textarea { border-color: var(--error); }
+
+.error { min-height: 1.1em; margin-top: 4px; font-size: 0.82rem; color: var(--error); }
+
+.contador { align-self: flex-end; color: var(--tinta-suave); }
+
+.campo-check { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
+.campo-check input { margin-top: 4px; width: 18px; height: 18px; }
+.campo-check label { flex: 1; font-weight: 400; margin: 0; }
+.campo-check .error { flex-basis: 100%; }
+
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: var(--radio);
+    background: var(--tinta);
+    color: var(--blanco);
+    font: 700 1rem "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.btn-enviar:hover { background: var(--tinta-suave); }
+.btn-enviar:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.mensaje-exito { margin: 14px 0 0; font-weight: 600; color: var(--exito); }
+
+.contacto-info ul { padding-left: 20px; margin: 0; }
+.contacto-info li { margin-bottom: 6px; font-size: 0.92rem; }
+
+/* ---------- Pie de página ---------- */
+footer {
+    padding: 28px 5%;
+    background: var(--tinta);
+    color: #d5dde3;
+    text-align: center;
+    font-size: 0.88rem;
+}
+footer p { margin: 4px 0; }
+footer a { color: var(--laton-claro); }
+
+/* ---------- Adaptación a móvil ---------- */
+@media (max-width: 800px) {
+    .btn-menu { display: block; }
+
+    .nav-colapsable {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 5% 16px;
+        background: var(--tinta);
+    }
+    .nav-colapsable.abierto { display: flex; }
+    .nav-colapsable a { padding: 12px 0; }
+
+    header nav:not(.nav-colapsable) { gap: 14px; font-size: 0.9rem; }
+
+    .contacto-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .carrito { transition: none; }
+    #contador-carrito.pop { animation: none; }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Aucoutix</title>
+    <meta name="description" content="Escríbenos para consultas sobre productos, pedidos, garantía o cambios. El equipo de Aucoutix te responde lo antes posible.">
+    <link rel="canonical" href="https://www.aucoutix.com/contacto2.html">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap">
+</head>
+
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.aucoutixfinal.jpg" alt="Aucoutix, ir al inicio" width="150" height="60">
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#productos">Productos</a>
+            <a href="contacto2.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="contacto">
+            <h1>Contáctanos</h1>
+
+            <p class="contacto-intro">
+                ¿Tienes dudas sobre un producto, tu pedido o la garantía?
+                Escríbenos y el equipo de Aucoutix te responderá lo antes posible.
+            </p>
+
+            <div class="contacto-grid">
+
+                <!-- Formulario -->
+                <form id="form-contacto" class="form-contacto" novalidate>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: María González">
+                        <span class="error" id="error-nombre"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico *</label>
+                        <input type="email" id="correo" name="correo" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+                        <span class="error" id="error-correo"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="987 654 321">
+                        <span class="error" id="error-telefono"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="motivo">Motivo de tu consulta *</label>
+                        <select id="motivo" name="motivo">
+                            <option value="">Selecciona una opción</option>
+                            <option>Consulta sobre un producto</option>
+                            <option>Estado de mi pedido</option>
+                            <option>Garantía y soporte técnico</option>
+                            <option>Cambios y devoluciones</option>
+                            <option>Reclamos y sugerencias</option>
+                            <option>Otro</option>
+                        </select>
+                        <span class="error" id="error-motivo"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" maxlength="600" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+                        <small class="contador"><span id="contador-mensaje">0</span>/600</small>
+                        <span class="error" id="error-mensaje"></span>
+                    </div>
+
+                    <div class="campo campo-check">
+                        <input type="checkbox" id="acepto" name="acepto">
+                        <label for="acepto">Acepto que Aucoutix use mis datos solo para responder esta consulta.</label>
+                        <span class="error" id="error-acepto"></span>
+                    </div>
+
+                    <button type="submit" id="btn-enviar" class="btn-enviar">Enviar mensaje</button>
+
+                    <p class="mensaje-exito" id="mensaje-exito" role="status"></p>
+
+                </form>
+
+                <!-- Información de contacto -->
+                <aside class="contacto-info">
+                    <h3>Escríbenos directamente</h3>
+                    <p>
+                        Si lo prefieres, también puedes enviarnos un correo a
+                        <a href="mailto:ventas@aucoutix.com">ventas@aucoutix.com</a>.
+                    </p>
+
+                    <h3>Para atenderte mejor</h3>
+                    <ul>
+                        <li>Indica el nombre del producto que te interesa.</li>
+                        <li>Si es sobre un pedido, menciona la fecha de compra.</li>
+                        <li>Deja un teléfono si quieres que te llamemos.</li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aucoutix - Yormin &copy; 2026</p>
+        <p>Contacto: ventas@aucoutix.com</p>
+    </footer>
+
+    <!-- JavaScript Module para Firebase -->
+    <script type="module" src="js/firebase.js"></script>
+</body>
+
+</html>
